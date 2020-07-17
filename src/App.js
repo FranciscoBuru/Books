@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './images/logo.svg';
-import './App.css';
+import{ BrowserRouter as Router, Route} from "react-router-dom";
+
+
+// styles for this kit
+import "./assets/css/bootstrap.min.css";
+import "./assets/scss/now-ui-kit.scss?v=1.4.0";
+import "./assets/demo/demo.css?v=1.4.0";
+import "./assets/demo/nucleo-icons-page-styles.css?v=1.4.0";
+//import "bootstrap/dist/css/bootstrap.min.css";
+//import './App.css';
+
+//Components
+import IndexNavbar from "./components/index-navbar.component"
+import IndexHeader from "./components/index-header.component"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <div>
+          <IndexNavbar/>
+        </div>
+        <div className="wrapper">
+          <IndexHeader/>
+        </div>
+
+    </Router>
   );
 }
+
+
 
 export default App;
